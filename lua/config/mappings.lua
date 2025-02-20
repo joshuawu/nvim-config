@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<Leader>t", ":NvimTreeFindFileToggle<CR>")
+vim.keymap.set("n", "<Leader>t", "<Cmd>NvimTreeFindFileToggle<CR>")
 
 local telescope = require("telescope")
 local telescope_builtin = require("telescope.builtin")
@@ -9,20 +9,21 @@ vim.keymap.set("n", "<Leader>h", telescope_builtin.help_tags, { desc = "Telescop
 vim.keymap.set("n", "<Leader>b", telescope_builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<Leader>?", telescope_builtin.keymaps, { desc = "Telescope key maps" })
 vim.keymap.set("n", "<Leader>r", telescope_builtin.lsp_references, { desc = "Telescope find all references" })
-vim.keymap.set(
-  "n",
-  "<Leader>v",
-  telescope.extensions.git_file_history.git_file_history,
-  { desc = "Telescope file version history" }
-)
+-- vim.keymap.set(
+--   "n",
+--   "<Leader>vh",
+--   telescope.extensions.git_file_history.git_file_history,
+--   { desc = "Telescope file version history" }
+-- )
 
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
   callback = function(event)
-    vim.keymap.set("n", "<Leader>]", ":TSToolsGoToSourceDefinition<CR>", { buffer = event.buf })
+    vim.keymap.set("n", "<Leader>]", "<Cmd>TSToolsGoToSourceDefinition<CR>", { buffer = event.buf })
   end,
 })
 
-vim.keymap.set("n", "<F7>", ":silent! cp<CR>:cc<CR>")
-vim.keymap.set("n", "<F8>", ":silent! cn<CR>:cc<CR>")
+vim.keymap.set("n", "<F7>", "<Cmd>silent! cp<CR><Cmd>cc<CR>")
+vim.keymap.set("n", "<F8>", "<Cmd>silent! cn<CR><Cmd>cc<CR>")
+vim.keymap.set("n", "<Leader>v", "<Cmd>Fugit2<CR>")
 vim.keymap.set("i", "jj", "<Esc>")
