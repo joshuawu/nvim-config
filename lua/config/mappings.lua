@@ -10,17 +10,17 @@ vim.keymap.set("n", "<Leader>b", telescope_builtin.buffers, { desc = "Telescope 
 vim.keymap.set("n", "<Leader>?", telescope_builtin.keymaps, { desc = "Telescope key maps" })
 vim.keymap.set("n", "<Leader>r", telescope_builtin.lsp_references, { desc = "Telescope find all references" })
 vim.keymap.set(
-	"n",
-	"<Leader>v",
-	telescope.extensions.git_file_history.git_file_history,
-	{ desc = "Telescope file version history" }
+  "n",
+  "<Leader>v",
+  telescope.extensions.git_file_history.git_file_history,
+  { desc = "Telescope file version history" }
 )
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-	callback = function(event)
-		vim.keymap.set("n", "<Leader>]", ":TSToolsGoToSourceDefinition<CR>", { buffer = event.buf })
-	end,
+  pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  callback = function(event)
+    vim.keymap.set("n", "<Leader>]", ":TSToolsGoToSourceDefinition<CR>", { buffer = event.buf })
+  end,
 })
 
 vim.keymap.set("n", "<F7>", ":silent! cp<CR>:cc<CR>")
