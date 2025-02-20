@@ -17,7 +17,7 @@ git clone https://github.com/joshuawu/nvim-config.git ~/.config/nvim
   - `pyright`
   - `prettierd`
   - `stylua`
-4. Install a (Nerd Font)[https://www.nerdfonts.com/].
+4. Install a [Nerd Font](https://www.nerdfonts.com/).
 5. (Optional) Add a Python provider.
 ```sh
 mkdir ~/.config/nvim/python
@@ -34,5 +34,6 @@ npm install -g neovim
 
 # Usage
 
-Type `<Leader>?` in normal mode to view key mappings in Telescope.
+Type `<Leader>?` (`<Space>?`) in normal mode to view key mappings in Telescope.
+
 (`<Leader>` is mapped to `<Space>` in `init.lua`.)
