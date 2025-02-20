@@ -4,6 +4,13 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		{
+			"isak102/telescope-git-file-history.nvim",
+			dependencies = {
+				"nvim-lua/plenary.nvim",
+				"tpope/vim-fugitive",
+			},
+		},
 	},
 	opts = {
 		defaults = {
