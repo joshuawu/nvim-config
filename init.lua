@@ -8,7 +8,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 require("config.lazy")
-require("config.wsl") -- delete if not using WSL
+require("config.wsl")
 require("config.python")
 
 require("config.options")

@@ -10,27 +10,26 @@ git clone https://github.com/joshuawu/nvim-config.git ~/.config/nvim
 
 # Setup
 
-1. If not using WSL, remove the line `require("config.wsl")` from `init.lua`.
-2. Run `:Lazy` and verify plugins are installed.
-3. Run `:Mason` and install any needed external tools such as:
+1. Launch `nvim`. `lazy.nvim` will automatically install plugins.
+2. Run `:Mason` and install any needed external tools such as:
   - `rust-analyzer`
   - `pyright`
   - `prettierd`
   - `stylua`
-4. Install a [Nerd Font](https://www.nerdfonts.com/).
-5. (Optional) Add a Python provider.
+3. Install a [Nerd Font](https://www.nerdfonts.com/).
+4. (Optional) Add a Python provider.
 ```sh
 mkdir ~/.config/nvim/python
 python -m venv ~/.config/nvim/python/venv
-source ~/.config/nvim/python/venv/bin/activate
+source ~/.config/nvim/python/venv/bin/activate # pick the script for your shell
 pip install pynvim
 deactivate
 ```
-6. (Optional) Add a Node provider.
+5. (Optional) Add a Node provider.
 ```sh
 npm install -g neovim
 ```
-7. Run `:checkhealth` to see if there are any issues.
+6. Run `:checkhealth` to see if there are any issues.
 
 # Usage
 
