@@ -2,6 +2,7 @@ vim.keymap.set("n", "<Leader>t", ":NvimTreeFindFileToggle<CR>")
 
 local telescope = require("telescope")
 local telescope_builtin = require("telescope.builtin")
+vim.keymap.set("n", "<Leader><Leader>", telescope_builtin.builtin, { desc = "Telescope built-in pickers" })
 vim.keymap.set("n", "<Leader>f", telescope_builtin.find_files, { desc = "Telescope find files" })
 vim.keymap.set("n", "<Leader>g", telescope_builtin.live_grep, { desc = "Telescope live grep" })
 vim.keymap.set("n", "<Leader>h", telescope_builtin.help_tags, { desc = "Telescope help tags" })
