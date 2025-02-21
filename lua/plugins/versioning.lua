@@ -17,7 +17,7 @@ return {
     ---@field blame_info_height integer height of blame hunk detail popup
     ---@field colorscheme string? custom color scheme override
     opts = {
-      libgit2_path = "libgit2.so.1.1",
+      libgit2_path = "libgit2.so.1.1", -- change this as instructed in https://github.com/SuperBo/fugit2.nvim/wiki/Install-libgit2
       width = 100,
       min_width = 50,
       content_width = 60,

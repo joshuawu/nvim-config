@@ -16,8 +16,9 @@ git clone https://github.com/joshuawu/nvim-config.git ~/.config/nvim
   - `pyright`
   - `prettierd`
   - `stylua`
-3. Install a [Nerd Font](https://www.nerdfonts.com/).
-4. (Optional) Add a Python provider.
+3. Install [libgit2](https://github.com/SuperBo/fugit2.nvim/wiki/Install-libgit2).
+4. Install a [Nerd Font](https://www.nerdfonts.com/).
+5. (Optional) Add a Python provider.
 ```sh
 mkdir ~/.config/nvim/python
 python -m venv ~/.config/nvim/python/venv
@@ -25,11 +26,11 @@ source ~/.config/nvim/python/venv/bin/activate # pick the script for your shell
 pip install pynvim
 deactivate
 ```
-5. (Optional) Add a Node provider.
+6. (Optional) Add a Node provider.
 ```sh
 npm install -g neovim
 ```
-6. Run `:checkhealth` to see if there are any issues.
+7. Run `:checkhealth` to see if there are any issues.
 
 # Usage
 
