@@ -42,7 +42,7 @@ npm install -g neovim
 - `<Leader><Leader>`: browse Telescope builtins
 - `<Leader>?`: browse custom keymaps
 - `<Leader>]`: go to source definition of symbol under cursor (js/jsx/ts/tsx only)
-- `<Leader>b`: find buffers
+- `<Leader>b`: git blame
 - `<Leader>f`: find files
 - `<Leader>g`: live grep
 - `<Leader>h`: find help
@@ -62,6 +62,9 @@ See `autocomplete.lua` for keymaps.
 ## Git (Fugit2)
 As of 2025-02-21 there is no `help` for `fugit2`.
 Read the [wiki](https://github.com/SuperBo/fugit2.nvim/wiki/%E2%8C%A8%EF%B8%8F-Usage-and-Keymap) to learn how to use it.
+
+## Trouble
+See `diagnose.lua` for keymaps.
 
 ## Other Plugin Keymaps
 Type `<Leader>?` to browse custom keymaps including those added by plugins.

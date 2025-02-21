@@ -39,9 +39,9 @@ return {
       },
     },
     cmd = { "Fugit2", "Fugit2Diff", "Fugit2Graph" },
-    keys = {
-      { "<Leader>v", mode = "n", "<Cmd>Fugit2<CR>" },
-    },
+    -- keys = {
+    --   { "<Leader>v", mode = "n", "<Cmd>Fugit2<CR>" },
+    -- },
   },
   {
     "lewis6991/gitsigns.nvim",
