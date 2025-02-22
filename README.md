@@ -70,5 +70,5 @@ See `autocomplete.lua` for keymaps.
 See [wiki](https://github.com/SuperBo/fugit2.nvim/wiki/%E2%8C%A8%EF%B8%8F-Usage-and-Keymap) for keymaps.
 (As of 2025-02-21 there is no `help` for `fugit2` keymaps.)
 
-## Trouble
-See `diagnose.lua` for keymaps.
+## Diagnostics
+See `diagnostics.lua` for keymaps.
