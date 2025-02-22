@@ -41,17 +41,17 @@ npm install -g neovim
 - `<F7>`: go to previous error in quickfix list
 - `<F8>`: go to next error in quickfix list
 - `<Leader>,`: edit custom keymaps
-- `<Leader><Leader>`: browse Telescope builtins
+- `<Leader><Leader>`: find files
 - `<Leader>?`: browse custom keymaps
-- ``<Leader>`​``: open terminal
 - `<Leader>]`: go to source definition of symbol under cursor (js/jsx/ts/tsx only)
 - `<Leader>b`: git blame
-- `<Leader>f`: find files
-- `<Leader>g`: live grep
+- `<Leader>f`: live grep
 - `<Leader>h`: find help
+- `<Leader>p`: browse Telescope builtins
 - `<Leader>r`: find references to symbol under cursor
 - `<Leader>t`: toggle file explorer
 - `<Leader>v`: open git interface
+- ``<Leader>`​``: open terminal
 
 ### Insert Mode
 - `jj`: switch to normal mode

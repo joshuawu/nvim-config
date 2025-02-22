@@ -2,15 +2,14 @@ vim.keymap.set("n", "<Leader>t", "<Cmd>NvimTreeFindFileToggle<CR>")
 
 -- local telescope = require("telescope")
 local telescope_builtin = require("telescope.builtin")
-vim.keymap.set("n", "<Leader><Leader>", telescope_builtin.builtin, { desc = "Telescope built-in pickers" })
-vim.keymap.set("n", "<Leader>f", telescope_builtin.find_files, { desc = "Telescope find files" })
-vim.keymap.set("n", "<Leader>g", telescope_builtin.live_grep, { desc = "Telescope live grep" })
-vim.keymap.set("n", "<Leader>h", telescope_builtin.help_tags, { desc = "Telescope help tags" })
--- vim.keymap.set("n", "<Leader>b", telescope_builtin.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<Leader><Leader>", telescope_builtin.find_files, { desc = "Telescope find files" })
 vim.keymap.set("n", "<Leader>?", telescope_builtin.keymaps, { desc = "Telescope key maps" })
+vim.keymap.set("n", "<Leader>b", "<Cmd>Gitsigns blame<CR>")
+vim.keymap.set("n", "<Leader>f", telescope_builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<Leader>h", telescope_builtin.help_tags, { desc = "Telescope help tags" })
+vim.keymap.set("n", "<Leader>p", telescope_builtin.builtin, { desc = "Telescope built-in pickers" })
 vim.keymap.set("n", "<Leader>r", telescope_builtin.lsp_references, { desc = "Telescope find all references" })
 vim.keymap.set("n", "<Leader>v", "<Cmd>Fugit2<CR>")
-vim.keymap.set("n", "<Leader>b", "<Cmd>Gitsigns blame<CR>")
 -- vim.keymap.set(
 --   "n",
 --   "<Leader>vh",
