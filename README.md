@@ -43,7 +43,7 @@ npm install -g neovim
 - `<Leader>,`: edit custom keymaps
 - `<Leader><Leader>`: browse Telescope builtins
 - `<Leader>?`: browse custom keymaps
-- `<Leader>\``: open terminal
+- ``<Leader>`​``: open terminal
 - `<Leader>]`: go to source definition of symbol under cursor (js/jsx/ts/tsx only)
 - `<Leader>b`: git blame
 - `<Leader>f`: find files
