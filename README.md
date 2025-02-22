@@ -16,7 +16,7 @@ git clone https://github.com/joshuawu/nvim-config.git ~/.config/nvim
   - `pyright`
   - `prettierd`
   - `stylua`
-3. Install [libgit2](https://github.com/SuperBo/fugit2.nvim/wiki/Install-libgit2).
+3. Install `libgit2` with your package manager.
 4. Install a [Nerd Font](https://www.nerdfonts.com/).
 5. (Optional) Add a Python provider.
 ```sh
