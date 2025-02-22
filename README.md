@@ -17,7 +17,7 @@ git clone https://github.com/joshuawu/nvim-config.git ~/.config/nvim
   - `prettierd`
   - `stylua`
 3. Install `libgit2` with your package manager.
-4. Install a [Nerd Font](https://www.nerdfonts.com/).
+4. Install a [Nerd Font](https://www.nerdfonts.com/) and use it in your terminal.
 5. (Optional) Add a Python provider.
 ```sh
 mkdir ~/.config/nvim/python
@@ -67,11 +67,8 @@ In addition to the default keymaps, use `CTRL-J`/`CTRL-K` to select the next/pre
 See `autocomplete.lua` for keymaps.
 
 ## Git (Fugit2)
-As of 2025-02-21 there is no `help` for `fugit2`.
-Read the [wiki](https://github.com/SuperBo/fugit2.nvim/wiki/%E2%8C%A8%EF%B8%8F-Usage-and-Keymap) to learn how to use it.
+See [wiki](https://github.com/SuperBo/fugit2.nvim/wiki/%E2%8C%A8%EF%B8%8F-Usage-and-Keymap) for keymaps.
+(As of 2025-02-21 there is no `help` for `fugit2` keymaps.)
 
 ## Trouble
 See `diagnose.lua` for keymaps.
-
-## Other Plugin Keymaps
-Type `<Leader>?` to browse custom keymaps including those added by plugins.
