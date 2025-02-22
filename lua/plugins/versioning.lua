@@ -6,7 +6,7 @@ return {
     ---@field width integer|string Main popup width
     ---@field max_width integer|string Main popup popup width when expand patch view
     ---@field min_width integer File view width when expand patch view
-    ---@field content_width File view content width
+    ---@field content_width integer view content width
     ---@field height integer|string Main popup height
     ---@field show_patch boolean show patch for active file when open fugit2 main window
     ---@field libgit2_path string? path to libgit2 lib, default: "libgit2"

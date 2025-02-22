@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<Leader>t", "<Cmd>NvimTreeFindFileToggle<CR>")
 
-local telescope = require("telescope")
+-- local telescope = require("telescope")
 local telescope_builtin = require("telescope.builtin")
 vim.keymap.set("n", "<Leader><Leader>", telescope_builtin.builtin, { desc = "Telescope built-in pickers" })
 vim.keymap.set("n", "<Leader>f", telescope_builtin.find_files, { desc = "Telescope find files" })
