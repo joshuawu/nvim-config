@@ -40,8 +40,10 @@ npm install -g neovim
 ### Normal Mode
 - `<F7>`: go to previous error in quickfix list
 - `<F8>`: go to next error in quickfix list
+- `<Leader>,`: edit custom keymaps
 - `<Leader><Leader>`: browse Telescope builtins
 - `<Leader>?`: browse custom keymaps
+- `<Leader>\``: open terminal
 - `<Leader>]`: go to source definition of symbol under cursor (js/jsx/ts/tsx only)
 - `<Leader>b`: git blame
 - `<Leader>f`: find files
@@ -52,6 +54,10 @@ npm install -g neovim
 - `<Leader>v`: open git interface
 
 ### Insert Mode
+- `jj`: switch to normal mode
+
+### Terminal Mode
+- `<Esc>`: switch to normal mode
 - `jj`: switch to normal mode
 
 ## Telescope

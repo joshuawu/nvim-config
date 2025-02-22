@@ -25,6 +25,10 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("n", "<F7>", "<Cmd>silent! cp<CR><Cmd>cc<CR>")
 vim.keymap.set("n", "<F8>", "<Cmd>silent! cn<CR><Cmd>cc<CR>")
-vim.keymap.set("i", "jj", "<Esc>")
+vim.keymap.set("n", "<Leader>,", "<Cmd>tabnew | tcd ~/.config/nvim | edit lua/config/mappings.lua<CR>")
+vim.keymap.set("n", "<Leader>`", "<Cmd>belowright vsplit +terminal<CR>i")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "jj", "<C-\\><C-n>")
