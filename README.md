@@ -12,9 +12,10 @@ git clone https://github.com/joshuawu/nvim-config.git ~/.config/nvim
 
 1. Launch `nvim`. `lazy.nvim` will automatically install plugins.
 2. Run `:Mason` and install any needed external tools such as:
-  - `rust-analyzer`
-  - `pyright`
+  - `lua-language-server`
   - `prettierd`
+  - `pyright`
+  - `rust-analyzer`
   - `stylua`
 3. Install `libgit2` with your package manager.
 4. Install a [Nerd Font](https://www.nerdfonts.com/) and use it in your terminal.

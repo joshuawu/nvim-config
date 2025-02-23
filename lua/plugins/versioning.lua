@@ -28,6 +28,21 @@ return {
       blame_info_width = 60,
       show_patch = true,
     },
+    config = function(_, opts)
+      local ffi = require("ffi")
+      local libgit2_dl_names = {
+        "libgit2",
+        "libgit2.so.1.7",
+        "libgit2.so.1.5",
+        "libgit2.so.1.1",
+      }
+      for _, name in ipairs(libgit2_dl_names) do
+        if pcall(ffi.load, name) then
+          opts.libgit2_path = name
+        end
+      end
+      require("fugit2").setup(opts)
+    end,
     dependencies = {
       "MunifTanjim/nui.nvim",
       "nvim-tree/nvim-web-devicons",
