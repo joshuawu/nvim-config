@@ -39,6 +39,7 @@ npm install -g neovim
 `<Leader>` is mapped to `<Space>` in `init.lua`.
 
 ### Normal Mode
+- `<C-/>`: Comment/Uncomment line
 - `<F7>`: go to previous error in quickfix list
 - `<F8>`: go to next error in quickfix list
 - `<Leader>,`: edit custom keymaps
@@ -56,6 +57,9 @@ npm install -g neovim
 
 ### Insert Mode
 - `jj`: switch to normal mode
+
+### Visual Mode
+- `<C-/>`: Comment/Uncomment selected line(s)
 
 ### Terminal Mode
 - `<Esc>`: switch to normal mode
