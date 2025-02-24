@@ -26,6 +26,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true })
+vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
 vim.keymap.set("n", "<F7>", "<Cmd>silent! cp | cc<CR>")
 vim.keymap.set("n", "<F8>", "<Cmd>silent! cn | cc<CR>")
 vim.keymap.set("n", "<Leader>,", "<Cmd>tabnew | tcd ~/.config/nvim | edit lua/config/mappings.lua<CR>")

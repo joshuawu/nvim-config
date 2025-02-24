@@ -40,6 +40,7 @@ npm install -g neovim
 
 ### Normal Mode
 - `<C-/>`: Comment/Uncomment line
+- `<F2>`: rename symbol under cursor
 - `<F7>`: go to previous error in quickfix list
 - `<F8>`: go to next error in quickfix list
 - `<Leader>,`: edit custom keymaps
