@@ -50,6 +50,8 @@ npm install -g neovim
 - `<Leader>f`: live grep
 - `<Leader>h`: find help
 - `<Leader>p`: browse Telescope builtins
+- `<Leader>Q`: save session and force-quit with `:qall`
+- `<Leader>q`: save session and quit with `:qall!`
 - `<Leader>r`: find references to symbol under cursor
 - `<Leader>t`: toggle file explorer
 - `<Leader>v`: open git interface
