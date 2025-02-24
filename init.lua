@@ -7,9 +7,9 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
-require("config.lazy")
-require("config.wsl")
-require("config.python")
-
-require("config.options")
-require("config.mappings")
+local lua_path = vim.fn.stdpath("config") .. "/lua/"
+local configs = vim.fn.glob(lua_path .. "config/**/*.lua", true, true)
+for _, config in ipairs(configs) do
+  local module_name = config:gsub("^" .. lua_path, ""):gsub("%.lua$", ""):gsub("/", ".")
+  require(module_name)
+end

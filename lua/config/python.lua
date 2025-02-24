@@ -1,1 +1,1 @@
-vim.g.python3_host_prog = "~/.config/nvim/python/venv/bin/python"
+vim.g.python3_host_prog = vim.fn.stdpath("config") .. "/python/venv/bin/python"
