@@ -1,12 +1,12 @@
 return {
   "hrsh7th/nvim-cmp",
   dependencies = {
-    "neovim/nvim-lspconfig",
-    "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
+    "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-nvim-lsp-signature-help",
+    "hrsh7th/cmp-path",
+    "neovim/nvim-lspconfig",
     -- "hrsh7th/cmp-vsnip",
     -- "hrsh7th/vim-vsnip",
   },
@@ -99,7 +99,18 @@ return {
     end
     lspconfig.lua_ls.setup({
       capabilities = capabilities,
-      settings = { Lua = { diagnostics = { globals = { "vim" } } } },
+      settings = {
+        Lua = {
+          completion = { showWord = "Disable" },
+          diagnostics = { globals = { "vim" } },
+          workspace = {
+            library = {
+              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+              [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+            },
+          },
+        },
+      },
     })
   end,
 }
