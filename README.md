@@ -51,6 +51,7 @@ npm install -g neovim
 - `<Leader>,`: Edit custom keymaps
 - `<Leader><Leader>`: Find files
 - `<Leader>]`: Go to source definition of symbol under cursor (js/jsx/ts/tsx only)
+- `<Leader>a`: Show code actions
 - `<Leader>b`: Git blame
 - `<Leader>f`: Live grep
 - `<Leader>h`: Find help
@@ -68,6 +69,7 @@ npm install -g neovim
 
 ### Visual Mode
 - `<C-/>`: Comment/Uncomment selected line(s)
+- `<Leader>a`: Show code actions
 - `J`: Expand selection to parent node
 - `K`: Contract selection to previous node
 - `L`: Expand selection to current scope or parent node
