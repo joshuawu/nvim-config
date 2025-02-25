@@ -13,8 +13,8 @@ vim.keymap.set("n", "<Leader>`", "<Cmd>vsplit +terminal<CR>i", { desc = "Open te
 local mksession_cmd = "mksession! " .. vim.fn.getcwd(-1, -1) .. "/.session.vim"
 vim.keymap.set("n", "<Leader>Q", "<Cmd>" .. mksession_cmd .. " | qall!<CR>", { desc = "Save session and force-quit" })
 vim.keymap.set("n", "<Leader>q", "<Cmd>" .. mksession_cmd .. " | qall<CR>", { desc = "Save session and quit" })
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Switch to Normal mode" })
-vim.keymap.set("t", "jj", "<C-\\><C-n>", { desc = "Switch to Normal mode" })
+vim.keymap.set("t", "<Esc>", "<C-\\><C-N>", { desc = "Switch to Normal mode" })
+vim.keymap.set("t", "jj", "<C-\\><C-N>", { desc = "Switch to Normal mode" })
 vim.keymap.set("v", "<C-/>", "gc", { remap = true, desc = "Comment/Uncomment selected lines" })
 vim.keymap.set({ "n", "v" }, "<Leader>a", vim.lsp.buf.code_action, { desc = "Show code actions" })
 vim.keymap.set({ "n", "v" }, "<C-_>", "<C-/>", { remap = true })

@@ -9,6 +9,10 @@ return {
       return mapping.desc
     end,
     sort = { "alphanum" },
+    keys = {
+      scroll_down = "<A-j>",
+      scroll_up = "<A-k>",
+    },
   },
   keys = {
     {
