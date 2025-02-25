@@ -1,3 +1,4 @@
+---@type LazyPluginSpec
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
@@ -22,6 +23,14 @@ return {
         require("which-key").show({ global = false })
       end,
       desc = "Show keymaps for this buffer",
+    },
+    {
+      "<C-/>",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "Show keymaps for this buffer",
+      mode = "i",
     },
   },
 }

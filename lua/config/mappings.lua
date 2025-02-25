@@ -1,4 +1,5 @@
 vim.keymap.set("i", "jj", "<Esc>", { desc = "Switch to Normal mode" })
+vim.keymap.set("i", "<C-_>", "<C-/>", { remap = true })
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment/Uncomment line" })
 vim.keymap.set("n", "<C-_>", "<C-/>", { remap = true })
 vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { desc = "Rename symbol" })

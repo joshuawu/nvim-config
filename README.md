@@ -45,14 +45,14 @@ npm install -g neovim
 - `<F7>`: Go to previous error in quickfix list
 - `<F8>`: Go to next error in quickfix list
 - `<Leader>,`: Edit custom keymaps
-- `<Leader>/`: Show all keymaps
+- `<Leader>/`: Show keymaps
 - `<Leader><Leader>`: Find files
-- `<Leader>?`: Show all keymaps for this buffer
+- `<Leader>?`: Show keymaps for this buffer
 - `<Leader>]`: Go to source definition of symbol under cursor (js/jsx/ts/tsx only)
 - `<Leader>b`: Git blame
 - `<Leader>f`: Live grep
 - `<Leader>h`: Find help
-- `<Leader>p`: Show all pickers
+- `<Leader>p`: Show pickers
 - `<Leader>Q`: Save session and force-quit with `:qall!`
 - `<Leader>q`: Save session and quit with `:qall`
 - `<Leader>r`: Find references to symbol under cursor
@@ -62,6 +62,7 @@ npm install -g neovim
 - `v`: Select node under cursor
 
 ### Insert Mode
+- `<C-/>`: Show keymaps for this buffer
 - `jj`: Switch to Normal mode
 
 ### Visual Mode
