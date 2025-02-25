@@ -41,36 +41,34 @@ npm install -g neovim
 
 ### Normal Mode
 - `<C-/>`: Comment/Uncomment line
-- `<F2>`: rename symbol under cursor
-- `<F7>`: go to previous error in quickfix list
-- `<F8>`: go to next error in quickfix list
-- `<Leader>,`: edit custom keymaps
-- `<Leader><Leader>`: find files
-- `<Leader>?`: browse custom keymaps
-- `<Leader>]`: go to source definition of symbol under cursor (js/jsx/ts/tsx only)
-- `<Leader>b`: git blame
-- `<Leader>f`: live grep
-- `<Leader>h`: find help
-- `<Leader>p`: browse Telescope builtins
-- `<Leader>Q`: save session and force-quit with `:qall`
-- `<Leader>q`: save session and quit with `:qall!`
-- `<Leader>r`: find references to symbol under cursor
-- `<Leader>t`: toggle file explorer
-- `<Leader>v`: open git interface
-- ``<Leader>`​``: open terminal
+- `<F2>`: Rename symbol under cursor
+- `<F7>`: Go to previous error in quickfix list
+- `<F8>`: Go to next error in quickfix list
+- `<Leader>,`: Edit custom keymaps
+- `<Leader>/`: Show all keymaps for this buffer
+- `<Leader><Leader>`: Find files
+- `<Leader>?`: Show all keymaps
+- `<Leader>Q`: Save session and force-quit with `:qall`
+- `<Leader>]`: Go to source definition of symbol under cursor (js/jsx/ts/tsx only)
+- `<Leader>b`: Git blame
+- `<Leader>f`: Live grep
+- `<Leader>h`: Find help
+- `<Leader>p`: Show all pickers
+- `<Leader>q`: Save session and quit with `:qall!`
+- `<Leader>r`: Find references to symbol under cursor
+- `<Leader>t`: Toggle file explorer
+- `<Leader>v`: Open git interface
+- ``<Leader>`​``: Open terminal
 
 ### Insert Mode
-- `jj`: switch to normal mode
+- `jj`: Switch to normal mode
 
 ### Visual Mode
 - `<C-/>`: Comment/Uncomment selected line(s)
 
 ### Terminal Mode
-- `<Esc>`: switch to normal mode
-- `jj`: switch to normal mode
-
-## Telescope
-In addition to the default keymaps, use `CTRL-J`/`CTRL-K` to select the next/previous item.
+- `<Esc>`: Switch to normal mode
+- `jj`: Switch to normal mode
 
 ## Autocomplete
 See `autocomplete.lua` for keymaps.
