@@ -8,6 +8,7 @@ return {
     filter = function(mapping)
       return mapping.desc
     end,
+    sort = { "alphanum" },
   },
   keys = {
     {
