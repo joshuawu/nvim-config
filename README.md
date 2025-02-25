@@ -61,14 +61,14 @@ npm install -g neovim
 - ``<Leader>`​``: Open terminal
 
 ### Insert Mode
-- `jj`: Switch to normal mode
+- `jj`: Switch to Normal mode
 
 ### Visual Mode
 - `<C-/>`: Comment/Uncomment selected line(s)
 
 ### Terminal Mode
-- `<Esc>`: Switch to normal mode
-- `jj`: Switch to normal mode
+- `<Esc>`: Switch to Normal mode
+- `jj`: Switch to Normal mode
 
 ## Autocomplete
 See `autocomplete.lua` for keymaps.
