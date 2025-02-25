@@ -11,26 +11,20 @@ return {
   },
   keys = {
     {
-      "<Leader>/",
+      "<A-\\>",
       function()
         require("which-key").show()
       end,
-      desc = "Show all keymaps",
+      desc = "Show keymaps",
+      mode = { "n", "i", "c", "x", "s", "o", "t", "l" },
     },
     {
-      "<Leader>?",
+      "<A-/>",
       function()
         require("which-key").show({ global = false })
       end,
       desc = "Show keymaps for this buffer",
-    },
-    {
-      "<C-/>",
-      function()
-        require("which-key").show({ global = false })
-      end,
-      desc = "Show keymaps for this buffer",
-      mode = "i",
+      mode = { "n", "i", "c", "x", "s", "o", "t", "l" },
     },
   },
 }

@@ -39,15 +39,17 @@ npm install -g neovim
 ## User Keymaps
 `<Leader>` is mapped to `<Space>` in `init.lua`.
 
+### All Modes
+- `<A-/>`: Show keymaps for this buffer
+- `<A-\>`: Show keymaps
+
 ### Normal Mode
 - `<C-/>`: Comment/Uncomment line
 - `<F2>`: Rename symbol under cursor
 - `<F7>`: Go to previous error in quickfix list
 - `<F8>`: Go to next error in quickfix list
 - `<Leader>,`: Edit custom keymaps
-- `<Leader>/`: Show keymaps
 - `<Leader><Leader>`: Find files
-- `<Leader>?`: Show keymaps for this buffer
 - `<Leader>]`: Go to source definition of symbol under cursor (js/jsx/ts/tsx only)
 - `<Leader>b`: Git blame
 - `<Leader>f`: Live grep
@@ -62,7 +64,6 @@ npm install -g neovim
 - `v`: Select node under cursor
 
 ### Insert Mode
-- `<C-/>`: Show keymaps for this buffer
 - `jj`: Switch to Normal mode
 
 ### Visual Mode
