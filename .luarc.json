@@ -2,7 +2,12 @@
   "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
   "completion": { "showWord": "Disable" },
   "diagnostics": { "globals": ["vim"] },
+  "runtime": { "version": "LuaJIT" },
   "workspace": {
-    "library": ["$VIMRUNTIME"]
+    "library": [
+      "$VIMRUNTIME",
+      "$XDG_DATA_HOME/nvim/lazy",
+      "~/.local/share/nvim/lazy"
+    ]
   }
 }
