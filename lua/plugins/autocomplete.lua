@@ -90,27 +90,18 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     local lspconfig = require("lspconfig")
     -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-    local servers = { "clangd", "rust_analyzer", "pyright" }
+    local servers = {
+      "clangd",
+      "jsonls",
+      "lua_ls",
+      "pyright",
+      "rust_analyzer",
+    }
     for _, lsp in ipairs(servers) do
       lspconfig[lsp].setup({
         -- on_attach = my_custom_on_attach,
         capabilities = capabilities,
       })
     end
-    lspconfig.lua_ls.setup({
-      capabilities = capabilities,
-      settings = {
-        Lua = {
-          completion = { showWord = "Disable" },
-          diagnostics = { globals = { "vim" } },
-          workspace = {
-            library = {
-              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-              [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
-            },
-          },
-        },
-      },
-    })
   end,
 }
