@@ -1,5 +1,6 @@
 return {
   "folke/snacks.nvim",
+  event = "BufEnter",
   ---@type snacks.Config
   opts = {
     explorer = {},
