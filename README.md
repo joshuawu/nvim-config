@@ -59,12 +59,16 @@ npm install -g neovim
 - `<Leader>t`: Toggle file explorer
 - `<Leader>v`: Open git interface
 - ``<Leader>`​``: Open terminal
+- `v`: Select node under cursor
 
 ### Insert Mode
 - `jj`: Switch to Normal mode
 
 ### Visual Mode
 - `<C-/>`: Comment/Uncomment selected line(s)
+- `J`: Expand selection to parent node
+- `K`: Contract selection to previous node
+- `L`: Expand selection to current scope or parent node
 
 ### Terminal Mode
 - `<Esc>`: Switch to Normal mode

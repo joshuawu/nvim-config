@@ -85,7 +85,7 @@ return {
       auto_open_qflist = true,
       auto_close_qflist = true,
       auto_focus_qflist = false,
-      auto_start_watch_mode = true,
+      auto_start_watch_mode = false, -- enabling this won't work since this is lazy-loaded
       use_trouble_qflist = true,
       use_diagnostics = false,
       run_as_monorepo = false,
@@ -98,5 +98,10 @@ return {
       hide_progress_notifications_from_history = true,
       pretty_errors = false,
     },
+    config = function(_, opts)
+      local tsc = require("tsc")
+      tsc.setup(opts)
+      tsc.run()
+    end,
   },
 }
