@@ -89,8 +89,8 @@ return {
       use_trouble_qflist = true,
       use_diagnostics = false,
       run_as_monorepo = false,
-      enable_progress_notifications = true,
-      enable_error_notifications = true,
+      enable_progress_notifications = false,
+      enable_error_notifications = false,
       flags = {
         noEmit = true,
         watch = true,
