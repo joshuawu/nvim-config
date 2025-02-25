@@ -2,6 +2,16 @@ return {
   {
     "SuperBo/fugit2.nvim",
     build = false,
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "nvim-lua/plenary.nvim",
+      -- {
+      --   "chrisgrieser/nvim-tinygit", -- optional: for Github PR view
+      --   dependencies = { "stevearc/dressing.nvim" },
+      -- },
+    },
+    cmd = { "Fugit2", "Fugit2Diff", "Fugit2Graph" },
     ---@class Fugit2Config
     opts = {
       width = 100,
@@ -30,16 +40,6 @@ return {
       end
       require("fugit2").setup(opts)
     end,
-    dependencies = {
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "nvim-lua/plenary.nvim",
-      {
-        "chrisgrieser/nvim-tinygit", -- optional: for Github PR view
-        dependencies = { "stevearc/dressing.nvim" },
-      },
-    },
-    cmd = { "Fugit2", "Fugit2Diff", "Fugit2Graph" },
     keys = {
       { "<Leader>v", "<Cmd>Fugit2<CR>", desc = "Open git interface" },
     },
