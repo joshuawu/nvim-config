@@ -1,7 +1,12 @@
+---@type string[]
+local filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" }
+
+---@type LazySpec
 return {
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    ft = filetypes,
     opts = {
       --on_attach = function() ... end,
       -- handlers = { ... },
@@ -58,9 +63,24 @@ return {
         },
       },
     },
+    config = function(_, opts)
+      require("typescript-tools").setup(opts)
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = filetypes,
+        callback = function(event)
+          vim.keymap.set(
+            "n",
+            "<Leader>]",
+            "<Cmd>TSToolsGoToSourceDefinition<CR>",
+            { buffer = event.buf, desc = "Go to source definition" }
+          )
+        end,
+      })
+    end,
   },
   {
     "dmmulroy/tsc.nvim",
+    ft = filetypes,
     opts = {
       auto_open_qflist = true,
       auto_close_qflist = true,

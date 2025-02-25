@@ -1,13 +1,3 @@
-vim.keymap.set("n", "<Leader>b", "<Cmd>Gitsigns blame<CR>")
-vim.keymap.set("n", "<Leader>v", "<Cmd>Fugit2<CR>")
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-  callback = function(event)
-    vim.keymap.set("n", "<Leader>]", "<Cmd>TSToolsGoToSourceDefinition<CR>", { buffer = event.buf })
-  end,
-})
-
 vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true })
 vim.keymap.set("n", "<C-_>", "<C-/>", { remap = true })
