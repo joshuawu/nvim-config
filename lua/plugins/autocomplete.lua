@@ -92,7 +92,6 @@ return {
     -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
     local servers = {
       "clangd",
-      "graphql",
       "jsonls",
       "lua_ls",
       "pyright",
@@ -104,5 +103,9 @@ return {
         capabilities = capabilities,
       })
     end
+    lspconfig.graphql.setup({
+      capabilities = capabilities,
+      filetypes = { "graphql", "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    })
   end,
 }
