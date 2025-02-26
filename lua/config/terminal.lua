@@ -28,7 +28,7 @@ local function get_window_title()
   if relative_cwd ~= relative_global_wd then
     relative_cwd = "(" .. relative_global_wd .. ") " .. relative_cwd
   end
-  local filename = vim.fn.expand("%")
+  local filename = vim.fn.expand("%:.")
   if filename == "" then
     filename = "[No Name]"
   end
