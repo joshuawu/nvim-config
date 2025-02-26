@@ -11,7 +11,30 @@ return {
         col = 0,
       },
     },
-    picker = {},
+    picker = {
+      sources = {
+        ---@type snacks.picker.files.Config
+        files = {
+          finder = "files",
+          format = "file",
+          show_empty = true,
+          hidden = true,
+          follow = false,
+          supports_live = true,
+        },
+        ---@type snacks.picker.grep.Config
+        grep = {
+          finder = "grep",
+          regex = true,
+          format = "file",
+          show_empty = true,
+          live = true,
+          supports_live = true,
+          hidden = true,
+          exclude = { "*-lock.*" },
+        },
+      },
+    },
   },
   keys = {
     {
