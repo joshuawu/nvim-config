@@ -52,6 +52,7 @@ return {
     end,
     keys = {
       { "<Leader>b", "<Cmd>Gitsigns blame<CR>", desc = "Git blame" },
+      { "<Leader>d", "<Cmd>Gitsigns toggle_word_diff<CR>", desc = "Toggle word diff" },
     },
   },
 }

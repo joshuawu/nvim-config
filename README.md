@@ -59,6 +59,7 @@ npm install -g neovim
 - `<Leader>]`: Go to source definition of symbol under cursor (js/jsx/ts/tsx only)
 - `<Leader>a`: Show code actions
 - `<Leader>b`: Git blame
+- `<Leader>d`: Toggle word diff
 - `<Leader>f`: Live grep
 - `<Leader>h`: Find help
 - `<Leader>p`: Show pickers
