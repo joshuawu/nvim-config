@@ -10,13 +10,13 @@ return {
     end,
     sort = { "alphanum" },
     keys = {
-      scroll_down = "<A-j>",
-      scroll_up = "<A-k>",
+      scroll_down = "<M-j>",
+      scroll_up = "<M-k>",
     },
   },
   keys = {
     {
-      "<A-\\>",
+      "<M-\\>",
       function()
         require("which-key").show()
       end,
@@ -24,7 +24,7 @@ return {
       mode = { "n", "i", "c", "x", "s", "o", "t", "l" },
     },
     {
-      "<A-/>",
+      "<M-/>",
       function()
         require("which-key").show({ global = false })
       end,

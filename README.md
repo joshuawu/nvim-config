@@ -37,11 +37,17 @@ npm install -g neovim
 # Usage
 
 ## User Keymaps
-`<Leader>` is mapped to `<Space>` in `init.lua`.
+- `<Leader>` is mapped to `<Space>` in `init.lua`.
+- `<M-` is the Meta or Alt modifier key.
+  - On OSX, the Option key can be used. This config will automatically enable using Option as Meta until you exit `nvim`.
+    - If it doesn't work, enable DECSET 1036 support for your terminal.
+      - In iTerm2, this can be enabled under `Settings > Advanced`. (Beta builds of iTerm2 should have this already enabled.)
+        - Make sure "Apps can change this" is checked under your profile's `Keys > General` settings.
+    - If your terminal doesn't support DECSET 1036, enable using Option as Meta globally in your terminal settings.
 
 ### All Modes
-- `<A-/>`: Show keymaps for this buffer
-- `<A-\>`: Show keymaps
+- `<M-/>`: Show keymaps for this buffer
+- `<M-\>`: Show keymaps
 
 ### Normal Mode
 - `<C-/>`: Comment/Uncomment line
