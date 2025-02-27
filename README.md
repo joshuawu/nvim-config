@@ -51,12 +51,14 @@ npm install -g neovim
 
 ### Normal Mode
 - `<C-/>`: Comment/Uncomment line
+- `<C-S>`: Save changes
 - `<F2>`: Rename symbol under cursor
 - `<F7>`: Go to previous error in quickfix list
 - `<F8>`: Go to next error in quickfix list
 - `<Leader>,`: Edit custom keymaps
 - `<Leader><Leader>`: Find files
-- `<Leader>]`: Go to source definition of symbol under cursor (js/jsx/ts/tsx only)
+- `<Leader>]`: Go to type definition of symbol under cursor
+- `<Leader>}`: Go to source definition of symbol under cursor (js/jsx/ts/tsx only)
 - `<Leader>a`: Show code actions
 - `<Leader>b`: Git blame
 - `<Leader>d`: Toggle word diff

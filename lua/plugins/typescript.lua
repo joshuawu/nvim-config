@@ -70,7 +70,7 @@ return {
         callback = function(event)
           vim.keymap.set(
             "n",
-            "<Leader>]",
+            "<Leader>}",
             "<Cmd>TSToolsGoToSourceDefinition<CR>",
             { buffer = event.buf, desc = "Go to source definition" }
           )

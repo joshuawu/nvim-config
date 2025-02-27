@@ -31,7 +31,7 @@ return {
           live = true,
           supports_live = true,
           hidden = true,
-          exclude = { "*-lock.*" },
+          exclude = { "*.lock", "*-lock.*" },
         },
       },
     },
