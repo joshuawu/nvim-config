@@ -89,7 +89,7 @@ npm install -g neovim
 
 ### Insert Mode
 
-- `jj`: Switch to Normal mode
+- `kj`: Switch to Normal mode
 
 ### Visual Mode
 
@@ -102,7 +102,7 @@ npm install -g neovim
 ### Terminal Mode
 
 - `<Esc>`: Switch to Normal mode
-- `jj`: Switch to Normal mode
+- `kj`: Switch to Normal mode
 
 ## Autocomplete
 
