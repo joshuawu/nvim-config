@@ -81,10 +81,10 @@ npm install -g neovim
 - `<Leader>t`: Toggle file explorer
 - `<Leader>v`: Open git interface
 - ``<Leader>`​``: Open terminal
-- `<M-h>`: Move cursor to window left
-- `<M-j>`: Move cursor to window below
-- `<M-k>`: Move cursor to window above
-- `<M-l>`: Move cursor to window right
+- `<M-S-h>`: Move cursor to window left
+- `<M-S-j>`: Move cursor to window below
+- `<M-S-k>`: Move cursor to window above
+- `<M-S-l>`: Move cursor to window right
 - `v`: Select node under cursor
 
 ### Insert Mode
