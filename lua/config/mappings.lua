@@ -2,8 +2,8 @@ vim.keymap.set("i", "jj", "<Esc>", { desc = "Switch to Normal mode" })
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment/Uncomment line" })
 vim.keymap.set("n", "<C-S>", ":w<CR>", { desc = "Save changes" })
 vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { desc = "Rename symbol" })
-vim.keymap.set("n", "<F7>", "<Cmd>silent! cp | cc<CR>", { desc = "Go to previous error" })
-vim.keymap.set("n", "<F8>", "<Cmd>silent! cn | cc<CR>", { desc = "Go to next error" })
+vim.keymap.set("n", "<F7>", "<Cmd>silent! cp | silent! cc<CR>", { desc = "Go to previous error" })
+vim.keymap.set("n", "<F8>", "<Cmd>silent! cn | silent! cc<CR>", { desc = "Go to next error" })
 vim.keymap.set(
   "n",
   "<Leader>,",
@@ -15,6 +15,10 @@ vim.keymap.set("n", "<Leader>`", "<Cmd>vsplit +terminal<CR>i", { desc = "Open te
 local mksession_cmd = "mksession! " .. vim.fn.getcwd(-1, -1) .. "/.session.vim"
 vim.keymap.set("n", "<Leader>Q", "<Cmd>" .. mksession_cmd .. " | qall!<CR>", { desc = "Save session and force-quit" })
 vim.keymap.set("n", "<Leader>q", "<Cmd>" .. mksession_cmd .. " | qall<CR>", { desc = "Save session and quit" })
+vim.keymap.set("n", "<M-h>", "<C-W>h", { desc = "Move cursor to window left" })
+vim.keymap.set("n", "<M-j>", "<C-W>j", { desc = "Move cursor to window below" })
+vim.keymap.set("n", "<M-k>", "<C-W>k", { desc = "Move cursor to window above" })
+vim.keymap.set("n", "<M-l>", "<C-W>l", { desc = "Move cursor to window right" })
 vim.keymap.set("t", "<Esc>", "<C-\\><C-N>", { desc = "Switch to Normal mode" })
 vim.keymap.set("t", "jj", "<C-\\><C-N>", { desc = "Switch to Normal mode" })
 vim.keymap.set("v", "<C-/>", "gc", { remap = true, desc = "Comment/Uncomment selected lines" })
