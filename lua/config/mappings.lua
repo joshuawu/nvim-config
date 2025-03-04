@@ -2,8 +2,6 @@ vim.keymap.set("i", "jj", "<Esc>", { desc = "Switch to Normal mode" })
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Comment/Uncomment line" })
 vim.keymap.set("n", "<C-S>", ":w<CR>", { desc = "Save changes" })
 vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { desc = "Rename symbol" })
-vim.keymap.set("n", "<F7>", "<Cmd>silent! cp | silent! cc<CR>", { desc = "Go to previous error" })
-vim.keymap.set("n", "<F8>", "<Cmd>silent! cn | silent! cc<CR>", { desc = "Go to next error" })
 vim.keymap.set(
   "n",
   "<Leader>,",

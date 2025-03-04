@@ -107,5 +107,9 @@ return {
       capabilities = capabilities,
       filetypes = { "graphql", "javascript", "javascriptreact", "typescript", "typescriptreact" },
     })
+
+    -- HACK: Ignore buggy GraphQL validation error message
+    local graphql_ns = vim.api.nvim_create_namespace("vim.lsp.graphql.2")
+    vim.diagnostic.enable(false, { ns_id = graphql_ns })
   end,
 }

@@ -1,6 +1,23 @@
 return {
   "folke/trouble.nvim",
-  opts = {}, -- for default options, refer to the configuration section for custom setup.
+  ---@type trouble.Config
+  ---@diagnostic disable-next-line: missing-fields
+  opts = {
+    modes = {
+      ---@type trouble.Config
+      ---@diagnostic disable-next-line: missing-fields
+      diagnostics = {
+        auto_open = true,
+        auto_close = true,
+        filter = function(items)
+          return vim.tbl_filter(function(item)
+            -- HACK: Ignore buggy GraphQL validation error message
+            return not vim.startswith(item.message, "Unknown fragment ")
+          end, items)
+        end,
+      },
+    },
+  },
   cmd = "Trouble",
   keys = {
     {
@@ -32,6 +49,24 @@ return {
       "<leader>xQ",
       "<cmd>Trouble qflist toggle<cr>",
       desc = "Quickfix List (Trouble)",
+    },
+    {
+      "<F7>",
+      function()
+        local trouble = require("trouble")
+        trouble.prev()
+        trouble.jump_only()
+      end,
+      desc = "Go to previous error",
+    },
+    {
+      "<F8>",
+      function()
+        local trouble = require("trouble")
+        trouble.next()
+        trouble.jump_only()
+      end,
+      desc = "Go to next error",
     },
   },
 }
