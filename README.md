@@ -58,12 +58,16 @@ npm install -g neovim
 
 - `<M-/>`: Show keymaps for this buffer
 - `<M-\>`: Show keymaps
+- `<M-H>`: Move cursor to window left
+- `<M-J>`: Move cursor to window below
+- `<M-K>`: Move cursor to window above
+- `<M-L>`: Move cursor to window right
 
 ### Normal Mode
 
 - `<C-/>`: Comment/Uncomment line
-- `<C-E>`: Show diagnostics under cursor
-- `<C-S>`: Save changes
+- `<C-e>`: Show diagnostics under cursor
+- `<C-s>`: Save changes
 - `<F2>`: Rename symbol under cursor
 - `<F7>`: Go to previous error in quickfix list
 - `<F8>`: Go to next error in quickfix list
@@ -83,10 +87,6 @@ npm install -g neovim
 - `<Leader>t`: Toggle file explorer
 - `<Leader>v`: Open git interface
 - ``<Leader>`​``: Open terminal
-- `<M-S-h>`: Move cursor to window left
-- `<M-S-j>`: Move cursor to window below
-- `<M-S-k>`: Move cursor to window above
-- `<M-S-l>`: Move cursor to window right
 - `v`: Select node under cursor
 
 ### Insert Mode
