@@ -16,17 +16,24 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
-require("lazy").setup({
-  spec = {
-    -- import your plugins
-    { import = "plugins" },
-  },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  -- checker = { enabled = false },
-})
+require("lazy").setup(
+  ---@type LazyConfig
+  {
+    spec = {
+      -- import your plugins
+      { import = "plugins" },
+    },
+    -- Configure any other settings here. See the documentation for more details.
+    -- colorscheme that will be used when installing plugins.
+    install = { colorscheme = { "habamax" } },
+    -- automatically check for plugin updates
+    -- checker = { enabled = false },
+
+    change_detection = {
+      notify = false,
+    },
+  }
+)
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()

@@ -62,6 +62,7 @@ npm install -g neovim
 ### Normal Mode
 
 - `<C-/>`: Comment/Uncomment line
+- `<C-E>`: Show diagnostics under cursor
 - `<C-S>`: Save changes
 - `<F2>`: Rename symbol under cursor
 - `<F7>`: Go to previous error in quickfix list

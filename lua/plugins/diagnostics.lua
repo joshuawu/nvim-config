@@ -9,6 +9,17 @@ return {
       diagnostics = {
         auto_open = true,
         auto_close = true,
+        win = {
+          type = "float",
+          relative = "editor",
+          border = "rounded",
+          size = { width = 80, height = 10 },
+          position = { 0.9, 0.5 },
+          title = "Diagnostics",
+          title_pos = "center",
+          footer = "<F7> Prev / <F8> Next",
+          footer_pos = "center",
+        },
         filter = function(items)
           return vim.tbl_filter(function(item)
             -- HACK: Ignore buggy GraphQL validation error message
