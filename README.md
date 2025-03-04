@@ -14,6 +14,7 @@ git clone https://github.com/joshuawu/nvim-config.git ~/.config/nvim
 1. Launch `nvim`. `lazy.nvim` will automatically install plugins.
 2. Run `:Mason` and install any needed external tools such as:
 
+- `eslint-lsp`
 - `json-lsp`
 - `lua-language-server`
 - `prettierd`
