@@ -48,7 +48,7 @@ return {
             file = { ft = "help" },
           },
           win = { preview = { minimal = true } },
-          confirm = "vertical help",
+          confirm = { action = "help", cmd = "vsplit" },
         },
       },
     },
