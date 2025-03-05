@@ -12,11 +12,9 @@ return {
         win = {
           type = "float",
           relative = "editor",
-          size = { width = 80, height = 10 },
-          position = { 0.9, 0.5 },
+          size = { width = 80, height = 8 },
+          position = { 0.92, 0.5 },
           border = "rounded",
-          title = "Diagnostics",
-          title_pos = "center",
           footer = "<F7> Prev / <F8> Next",
           footer_pos = "center",
         },
@@ -51,7 +49,7 @@ return {
           ---@diagnostic disable-next-line: assign-type-mismatch
           opts = opts
           opts.type = "split"
-          opts.size = prev_opts.split and prev_opts.split.size or 10
+          opts.size = prev_opts.split and prev_opts.split.size or 8
           opts.position = prev_opts.split and prev_opts.split.position or "bottom"
           ---@diagnostic disable-next-line: inject-field
           opts.win = -1
@@ -62,7 +60,7 @@ return {
             win = -1,
             relative = "",
             split = "below",
-            height = 10,
+            height = opts.size,
           })
         )
       elseif opts.type == "split" then
@@ -76,7 +74,7 @@ return {
           ---@diagnostic disable-next-line: assign-type-mismatch
           opts = opts
           opts.type = "float"
-          opts.size = prev_opts.float and prev_opts.float.size or { width = 80, height = 10 }
+          opts.size = prev_opts.float and prev_opts.float.size or { width = 80, height = 8 }
           opts.position = prev_opts.float and prev_opts.float.position or { 0.9, 0.5 }
         end
         local y = opts.position[1]
