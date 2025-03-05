@@ -18,6 +18,9 @@ local mksession_cmd = "mksession! " .. vim.fn.getcwd(-1, -1) .. "/.session.vim"
 vim.keymap.set("n", "<Leader>Q", "<Cmd>" .. mksession_cmd .. " | qall!<CR>", { desc = "Save session and force-quit" })
 vim.keymap.set("n", "<Leader>q", "<Cmd>" .. mksession_cmd .. " | qall<CR>", { desc = "Save session and quit" })
 
+vim.keymap.set("n", "<M-o>", "<Cmd>bprevious<CR>", { desc = "Go to previous buffer" })
+vim.keymap.set("n", "<M-i>", "<Cmd>bnext<CR>", { desc = "Go to next buffer" })
+
 vim.keymap.set("t", "<Esc>", "<C-\\><C-N>", { desc = "Switch to Normal mode" })
 vim.keymap.set("t", "jj", "<C-\\><C-N>", { desc = "Switch to Normal mode" })
 
