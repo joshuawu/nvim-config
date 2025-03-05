@@ -3,6 +3,7 @@ vim.opt.list = true
 vim.opt.number = true
 vim.opt.shiftwidth = 2
 vim.opt.showmode = false
+vim.opt.signcolumn = "number"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.tabstop = 2
