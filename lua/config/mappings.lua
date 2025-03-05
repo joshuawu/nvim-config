@@ -14,10 +14,6 @@ vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { desc = "Rename symbol" })
 vim.keymap.set("n", "<Leader>]", vim.lsp.buf.type_definition, { desc = "Go to type definition" })
 vim.keymap.set("n", "<Leader>`", "<Cmd>vsplit +terminal<CR>i", { desc = "Open terminal" })
 
-local mksession_cmd = "mksession! " .. vim.fn.getcwd(-1, -1) .. "/.session.vim"
-vim.keymap.set("n", "<Leader>Q", "<Cmd>" .. mksession_cmd .. " | qall!<CR>", { desc = "Save session and force-quit" })
-vim.keymap.set("n", "<Leader>q", "<Cmd>" .. mksession_cmd .. " | qall<CR>", { desc = "Save session and quit" })
-
 vim.keymap.set("n", "<M-o>", "<Cmd>bprevious<CR>", { desc = "Go to previous buffer" })
 vim.keymap.set("n", "<M-i>", "<Cmd>bnext<CR>", { desc = "Go to next buffer" })
 

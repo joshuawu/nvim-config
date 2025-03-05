@@ -21,6 +21,7 @@ git clone https://github.com/joshuawu/nvim-config.git ~/.config/nvim
 - `pyright`
 - `rust-analyzer`
 - `stylua`
+- `graphql-language-service-cli`
 
 3. Install `libgit2` with your package manager.
 4. Install a [Nerd Font](https://www.nerdfonts.com/) and use it in your terminal.
