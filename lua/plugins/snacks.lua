@@ -12,6 +12,13 @@ return {
       },
     },
     picker = {
+      win = {
+        input = {
+          keys = {
+            ["<M-s>"] = { "vsplit", mode = { "i", "n" }, desc = "Open in vertical split" },
+          },
+        },
+      },
       sources = {
         ---@type snacks.picker.files.Config
         files = {
@@ -32,6 +39,16 @@ return {
           supports_live = true,
           hidden = true,
           exclude = { "*.lock", "*-lock.*" },
+        },
+        ---@type snacks.picker.help.Config
+        help = {
+          finder = "help",
+          format = "text",
+          previewers = {
+            file = { ft = "help" },
+          },
+          win = { preview = { minimal = true } },
+          confirm = "vertical help",
         },
       },
     },
