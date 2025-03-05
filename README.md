@@ -77,16 +77,21 @@ npm install -g neovim
 - `<Leader>}`: Go to source definition of symbol under cursor (js/jsx/ts/tsx only)
 - `<Leader>a`: Show code actions
 - `<Leader>b`: Git blame
+- `<Leader>cl`: Toggle LSP info explorer
+- `<Leader>cs`: Toggle symbols explorer
 - `<Leader>d`: Toggle word diff
 - `<Leader>f`: Live grep
 - `<Leader>h`: Find help
 - `<Leader>p`: Show pickers
-- `<Leader>Q`: Save session and force-quit with `:qall!`
 - `<Leader>q`: Save session and quit with `:qall`
+- `<Leader>Q`: Save session and force-quit with `:qall!`
 - `<Leader>r`: Find references to symbol under cursor
 - `<Leader>t`: Toggle file explorer
 - `<Leader>v`: Open git interface
+- `<Leader>x`: Toggle diagnostics position
 - ``<Leader>`​``: Open terminal
+- `<M-i>`: Go to previous buffer
+- `<M-o>`: Go to next buffer
 - `v`: Select node under cursor
 
 ### Insert Mode
@@ -114,7 +119,3 @@ See `autocomplete.lua` for keymaps.
 
 See [wiki](https://github.com/SuperBo/fugit2.nvim/wiki/%E2%8C%A8%EF%B8%8F-Usage-and-Keymap) for keymaps.
 (As of 2025-02-21 there is no `help` for `fugit2` keymaps.)
-
-## Diagnostics
-
-See `diagnostics.lua` for keymaps.
