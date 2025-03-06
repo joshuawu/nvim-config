@@ -92,6 +92,7 @@ return {
     -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
     local servers = {
       "clangd",
+      "eslint",
       "jsonls",
       "lua_ls",
       "pyright",
