@@ -116,6 +116,22 @@ return {
       capabilities = capabilities,
       filetypes = { "graphql", "javascript", "javascriptreact", "typescript", "typescriptreact" },
     })
+    lspconfig.stylelint_lsp.setup({
+      capabilities = capabilities,
+      settings = {
+        stylelintplus = {
+          autoFixOnFormat = true,
+        },
+      },
+      on_attach = function(_, buffer)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          buffer = buffer,
+          callback = function()
+            vim.lsp.buf.format()
+          end,
+        })
+      end,
+    })
 
     -- HACK: Ignore buggy GraphQL validation error message
     local graphql_ns = vim.api.nvim_create_namespace("vim.lsp.graphql.2")

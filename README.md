@@ -20,6 +20,7 @@ git clone https://github.com/joshuawu/nvim-config.git ~/.config/nvim
 - `prettierd`
 - `pyright`
 - `rust-analyzer`
+- `stylelint-lsp`
 - `stylua`
 - `graphql-language-service-cli`
 
