@@ -10,10 +10,9 @@ return {
         auto_open = true,
         auto_close = true,
         win = {
-          type = "float",
-          relative = "editor",
-          size = { width = 32, height = 16 },
-          position = { 0.02, 1 },
+          type = "split",
+          size = 8,
+          position = "bottom",
           border = "rounded",
           title = "<Leader>x Toggle",
           title_pos = "right",
@@ -76,7 +75,7 @@ return {
           ---@diagnostic disable-next-line: assign-type-mismatch
           opts = opts
           opts.type = "float"
-          opts.size = prev_opts.float and prev_opts.float.size or { width = 32, height = 16 }
+          opts.size = prev_opts.float and prev_opts.float.size or { width = 80, height = 8 }
           opts.position = prev_opts.float and prev_opts.float.position or { 0.9, 0.5 }
         end
         local y = opts.position[1]
