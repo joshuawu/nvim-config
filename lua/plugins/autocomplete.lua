@@ -92,7 +92,6 @@ return {
     -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
     local servers = {
       "clangd",
-      "eslint",
       "jsonls",
       "lua_ls",
       "pyright",
@@ -104,6 +103,15 @@ return {
         capabilities = capabilities,
       })
     end
+    lspconfig.eslint.setup({
+      capabilities = capabilities,
+      on_attach = function(_, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          buffer = bufnr,
+          command = "EslintFixAll",
+        })
+      end,
+    })
     lspconfig.graphql.setup({
       capabilities = capabilities,
       filetypes = { "graphql", "javascript", "javascriptreact", "typescript", "typescriptreact" },
