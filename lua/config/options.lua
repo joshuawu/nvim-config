@@ -1,3 +1,4 @@
+vim.opt.backupcopy = "yes"
 vim.opt.expandtab = true
 vim.opt.list = true
 vim.opt.number = true
