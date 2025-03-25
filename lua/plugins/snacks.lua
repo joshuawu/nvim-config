@@ -38,7 +38,7 @@ return {
           live = true,
           supports_live = true,
           hidden = true,
-          exclude = { "*.lock", "*-lock.*" },
+          exclude = { "*.lock", "*-lock.*", "**/generated/**" },
         },
         ---@type snacks.picker.help.Config
         help = {
