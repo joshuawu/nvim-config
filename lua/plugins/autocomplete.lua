@@ -88,22 +88,8 @@ return {
 
     -- Set up lspconfig.
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
-    local lspconfig = require("lspconfig")
     -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-    local servers = {
-      "clangd",
-      "jsonls",
-      "lua_ls",
-      "pyright",
-      "rust_analyzer",
-    }
-    for _, lsp in ipairs(servers) do
-      lspconfig[lsp].setup({
-        -- on_attach = my_custom_on_attach,
-        capabilities = capabilities,
-      })
-    end
-    lspconfig.eslint.setup({
+    vim.lsp.config("eslint", {
       capabilities = capabilities,
       on_attach = function(_, bufnr)
         vim.api.nvim_create_autocmd("BufWritePre", {
@@ -112,11 +98,11 @@ return {
         })
       end,
     })
-    lspconfig.graphql.setup({
+    vim.lsp.config("graphql", {
       capabilities = capabilities,
       filetypes = { "graphql", "javascript", "javascriptreact", "typescript", "typescriptreact" },
     })
-    lspconfig.stylelint_lsp.setup({
+    vim.lsp.config("stylelint_lsp", {
       capabilities = capabilities,
       settings = {
         stylelintplus = {
@@ -132,6 +118,30 @@ return {
         })
       end,
     })
+
+    vim.lsp.config("pyright", {
+      capabilities = capabilities,
+      settings = {
+        python = {
+          pythonPath = ".venv/bin/python",
+        },
+      },
+    })
+    vim.lsp.enable("pyright")
+
+    local new_servers = {
+      "clangd",
+      "jsonls",
+      "lua_ls",
+      "rust_analyzer",
+      "kotlin_lsp",
+    }
+    for _, server in ipairs(new_servers) do
+      vim.lsp.config(server, {
+        capabilities = capabilities,
+      })
+      vim.lsp.enable(server)
+    end
 
     -- HACK: Ignore buggy GraphQL validation error message
     local graphql_ns = vim.api.nvim_create_namespace("vim.lsp.graphql.2")
