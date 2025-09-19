@@ -5,7 +5,7 @@ return {
   opts = {
     format_on_save = {
       -- These options will be passed to conform.format()
-      timeout_ms = 500,
+      timeout_ms = 3000,
       lsp_format = "fallback",
     },
     formatters_by_ft = {
@@ -20,6 +20,7 @@ return {
       javascriptreact = { "prettierd" },
       typescript = { "prettierd" },
       typescriptreact = { "prettierd" },
+      kotlin = { "ktlint" },
       json = { "prettierd" },
       jsonc = { "prettierd" },
       graphql = { "prettierd" },
