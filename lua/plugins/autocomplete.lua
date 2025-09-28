@@ -89,12 +89,18 @@ return {
     -- Set up lspconfig.
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
+    local eslint_base_on_attach = vim.lsp.config.eslint.on_attach
     vim.lsp.config("eslint", {
       capabilities = capabilities,
-      on_attach = function(_, bufnr)
+      on_attach = function(client, bufnr)
+        if not eslint_base_on_attach then
+          return
+        end
+
+        eslint_base_on_attach(client, bufnr)
         vim.api.nvim_create_autocmd("BufWritePre", {
           buffer = bufnr,
-          command = "EslintFixAll",
+          command = "LspEslintFixAll",
         })
       end,
     })
