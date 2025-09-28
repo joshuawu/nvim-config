@@ -98,10 +98,14 @@ return {
         })
       end,
     })
+    vim.lsp.enable("eslint")
+
     vim.lsp.config("graphql", {
       capabilities = capabilities,
       filetypes = { "graphql", "javascript", "javascriptreact", "typescript", "typescriptreact" },
     })
+    vim.lsp.enable("graphql")
+
     vim.lsp.config("stylelint_lsp", {
       capabilities = capabilities,
       settings = {
@@ -118,6 +122,7 @@ return {
         })
       end,
     })
+    vim.lsp.enable("stylelint_lsp")
 
     vim.lsp.config("pyright", {
       capabilities = capabilities,
