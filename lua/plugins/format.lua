@@ -27,7 +27,6 @@ return {
       markdown = { "prettierd" },
       yaml = { "prettierd" },
       css = { "prettierd" },
-      ["_"] = { "prettierd" },
     },
   },
   config = function(_, opts)
